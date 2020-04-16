@@ -1,0 +1,8 @@
+name: test
+description: This is the real first story in Go-AL
+logfile:
+goalcmds:
+  - file echo -w '$HOME'
+  - file ls -l -d /tmp
+  - file ls -l -d /vagrant
+  - package update -s
