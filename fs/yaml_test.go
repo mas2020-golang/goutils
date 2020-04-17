@@ -23,6 +23,23 @@ func TestReadYaml(t *testing.T) {
 	assert.Equal(t, 4, len(story.GoALCmds), "GoALCmds should be equal 4")
 }
 
+func TestWriteYaml(t *testing.T) {
+	yamlF := "test2.yaml"
+
+	var s Story = Story{
+		Name: "New Story",
+		Description: "New Story",
+		LogFile: "New Story",
+		GoALCmds: []string{"cmd1", "cmd2", "cmd3"},
+	}
+
+	if err := WriteYaml(yamlF, s); err != nil {
+		fmt.Println(err.Error())
+	}
+	// assert equality
+	//assert.Equal(t, 4, len(story.GoALCmds), "GoALCmds should be equal 4")
+}
+
 func TestExistsPath(t *testing.T) {
 	yamlF := "test.yaml"
 	var (
