@@ -21,6 +21,22 @@ func ReadYaml(filepath string, inter interface{}) error {
 	return nil
 }
 
+// Read single module from yaml file and return the object as interface
+func WriteYaml(filepath string, inter interface{}) error {
+	f, err := os.Create(filepath)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	// Unmarshall command
+	encoder := yaml.NewEncoder(f)
+	err = encoder.Encode(inter)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 // Returns whether the given file or directory exists
 func ExistsPath(path string) (bool, error) {
 	_, err := os.Stat(path)
