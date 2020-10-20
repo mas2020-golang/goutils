@@ -3,9 +3,11 @@ package output
 import (
 	"testing"
 	"github.com/jedib0t/go-pretty/text"
+	log "github.com/sirupsen/logrus"
 )
 
 func TestColors(t *testing.T) {
+	log.SetLevel(log.TraceLevel)
 	Error("TestColors", "Error message")
 	Debug("TestColors", "Debug message")
 	Trace("TestColors", "Trace message")
@@ -18,5 +20,5 @@ func TestColors(t *testing.T) {
 	Cyan("Cyan message")
 	CyanBold("Cyan Bold message")
 	Message("Generic message", text.Colors{text.Bold, text.BgGreen})
-	ErrorExit("TestColors", "Error message")
+	//ErrorExit("TestColors", "Error message bye bye...")
 }
