@@ -6,11 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
-## [0.1.0] - 2020-xx-xx
+## [0.1.0] - 2020-10-20
 
 ### Added
 
-- xxx
-
-### Fixed
-- xxx
+- output package to write simply colored messages and report error the standard output
+- fs package to simply Marshal and Unmarshal yaml file into a generic custom struct
