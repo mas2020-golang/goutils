@@ -1,4 +1,4 @@
-module bitbucket.org/gophers2020/goal-utils
+module github.com/mas2020-golang/goutils
 
 go 1.14
 
