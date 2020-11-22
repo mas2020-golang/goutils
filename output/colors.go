@@ -12,7 +12,7 @@ func init() {
 }
 
 func Error(function string, message string) {
-	log.Error(fmt.Sprintf("%s - %s", function, message))
+	log.Error(fmt.Sprintf("(%s) %s", function, message))
 	fmt.Println(text.Colors{text.FgRed}.Sprintf("Houston, help: %s", message))
 }
 
