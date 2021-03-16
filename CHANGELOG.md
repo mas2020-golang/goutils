@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
+## [0.4.0] - 2021-03-16
+
+### Added
+- add HiWhite, HiWhiteBold functions
+- add HiYellow, HiYellowBold functions
+- add HiMagenta, HiMagentaBold functions
+
 ## [0.3.0] - 2021-03-16
 
 ### Added
