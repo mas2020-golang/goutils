@@ -19,6 +19,8 @@ func TestColors(t *testing.T) {
 	YellowBold("Yellow Bold message")
 	Cyan("Cyan message")
 	CyanBold("Cyan Bold message")
+	White("White message")
+	WhiteBold("White Bold message")
 	Message("Generic message", text.Colors{text.Bold, text.BgGreen})
 	//ErrorExit("TestColors", "Error message bye bye...")
 }

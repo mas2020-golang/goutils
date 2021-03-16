@@ -67,6 +67,14 @@ func CyanBold(message string) {
 	fmt.Println(text.Colors{text.FgCyan, text.Bold}.Sprint(message))
 }
 
+func White(message string) {
+	fmt.Println(text.Colors{text.FgHiWhite}.Sprint(message))
+}
+
+func WhiteBold(message string) {
+	fmt.Println(text.Colors{text.FgHiWhite, text.Bold}.Sprint(message))
+}
+
 // Generic message with a custom color
 func Message(message string, colors text.Colors) {
 	fmt.Println(colors.Sprint(message))
