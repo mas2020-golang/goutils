@@ -2,96 +2,81 @@ package output
 
 import (
 	"fmt"
-	"github.com/jedib0t/go-pretty/text"
-	log "github.com/sirupsen/logrus"
-	"os"
 )
 
-func init() {
-	log.SetFormatter(new(TextFormatter))
+const (
+	Reset  = "\033[0m"
+	Red    = "\033[31m"
+	LightRed    = "\033[91m"
+	Green  = "\033[32m"
+	LightGreen  = "\033[92m"
+	Yellow = "\033[33m"
+	LightYellow = "\033[93m"
+	Blue   = "\033[34m"
+	LightBlue   = "\033[94m"
+	Purple = "\033[35m"
+	LightPurple = "\033[95m"
+	Cyan   = "\033[36m"
+	LightCyan   = "\033[96m"
+	Gray   = "\033[37m"
+	White  = "\033[97m"
+	Default = "\033[39m"
+	DarkGray = "\033[90m"
+	Bold = "\033[1m"
+)
+
+func GreenText(message string) {
+	fmt.Printf("%s%s%s\n",Green,message,Reset)
 }
 
-func Error(function string, message string) {
-	log.Error(fmt.Sprintf("(%s) %s", function, message))
-	fmt.Println(text.Colors{text.FgRed}.Sprintf("Houston, help: %s", message))
+func GreenTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Green,Bold,message,Reset)
 }
 
-func ErrorExit(function string, message string) {
-	Error(function, message)
-	os.Exit(1)
+func BlueText(message string) {
+	fmt.Printf("%s%s%s\n",Blue,message,Reset)
 }
 
-func CheckError(function string, message string, err error) {
-	if err != nil {
-		ErrorExit(function, message)
-	}
+func BlueTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Blue,Bold,message,Reset)
 }
 
-func Debug(function string, message string) {
-	log.Debug(fmt.Sprintf("%s - %s", function, message))
+func YellowText(message string) {
+	fmt.Printf("%s%s%s\n",Yellow,message,Reset)
 }
 
-func Trace(function string, message string) {
-	log.Trace(fmt.Sprintf("%s - %s", function, message))
+func YellowTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Yellow,Bold,message,Reset)
 }
 
-func Green(message string) {
-	fmt.Println(text.Colors{text.FgGreen}.Sprint(message))
+func CyanText(message string) {
+	fmt.Printf("%s%s%s\n",Cyan,message,Reset)
 }
 
-func GreenBold(message string) {
-	fmt.Println(text.Colors{text.FgGreen, text.Bold}.Sprint(message))
+func CyanTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Cyan,Bold,message,Reset)
 }
 
-func Blue(message string) {
-	fmt.Println(text.Colors{text.FgBlue}.Sprint(message))
+func WhiteText(message string) {
+	fmt.Printf("%s%s%s\n",White,message,Reset)
 }
 
-func BlueBold(message string) {
-	fmt.Println(text.Colors{text.FgBlue, text.Bold}.Sprint(message))
+func WhiteTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",White,Bold,message,Reset)
 }
 
-func Yellow(message string) {
-	fmt.Println(text.Colors{text.FgYellow}.Sprint(message))
+func MagentaText(message string) {
+	fmt.Printf("%s%s%s\n",Purple,message,Reset)
 }
 
-func YellowBold(message string) {
-	fmt.Println(text.Colors{text.FgYellow, text.Bold}.Sprint(message))
+func MagentaTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Purple,Bold,message,Reset)
 }
 
-func Cyan(message string) {
-	fmt.Println(text.Colors{text.FgCyan}.Sprint(message))
+func RedText(message string) {
+	fmt.Printf("%s%s%s\n",Red,message,Reset)
 }
 
-func CyanBold(message string) {
-	fmt.Println(text.Colors{text.FgCyan, text.Bold}.Sprint(message))
-}
-
-func HiWhite(message string) {
-	fmt.Println(text.Colors{text.FgHiWhite}.Sprint(message))
-}
-
-func HiWhiteBold(message string) {
-	fmt.Println(text.Colors{text.FgHiWhite, text.Bold}.Sprint(message))
-}
-
-func HiMagenta(message string) {
-	fmt.Println(text.Colors{text.FgHiMagenta}.Sprint(message))
-}
-
-func HiMagentaBold(message string) {
-	fmt.Println(text.Colors{text.FgHiMagenta, text.Bold}.Sprint(message))
-}
-
-func HiYellow(message string) {
-	fmt.Println(text.Colors{text.FgHiYellow}.Sprint(message))
-}
-
-func HiYellowBold(message string) {
-	fmt.Println(text.Colors{text.FgHiYellow, text.Bold}.Sprint(message))
-}
-
-// Generic message with a custom color
-func Message(message string, colors text.Colors) {
-	fmt.Println(colors.Sprint(message))
+func RedTextB(message string) {
+	fmt.Printf("%s%s%s%s\n",Red,Bold,message,Reset)
 }
