@@ -17,8 +17,8 @@ func (f *TextFormatter) Format(entry *log.Entry) ([]byte, error) {
 	//var err error
 	serialized := make([]byte, 0, 300)
 	serialized = append(serialized, []byte(entry.Time.Format("2006-01-02 15:04:05.000 "))...)
-	//level := fmt.Sprintf("%-10s","[" + strings.ToUpper(entry.Level.String()) + "] ")
-	serialized = append(serialized, []byte(colorizeLevel(entry.Level))...)
+	level := fmt.Sprintf("%-19s",colorizeLevel(entry.Level))
+	serialized = append(serialized, []byte(level)...)
 	serialized = append(serialized, []byte(entry.Message)...)
 	if data, err := json.Marshal(entry.Data); err == nil && len(data) > 2{
 		serialized = append(serialized, ' ')
