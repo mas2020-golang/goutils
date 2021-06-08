@@ -115,6 +115,6 @@ func ErrorExit(function string, message string) {
 // otherwise nothing happens.
 func CheckErrorAndExit(function string, message string, err error) {
 	if err != nil {
-		ErrorExit(function, message)
+		ErrorExit(function, message + " " + err.Error())
 	}
 }
