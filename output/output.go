@@ -118,3 +118,12 @@ func CheckErrorAndExit(function string, message string, err error) {
 		ErrorExit(function, message + " " + err.Error())
 	}
 }
+
+// CheckErrorAndExit checks any error and in case of any shows the message using the ErrorLog func and then exit,
+// otherwise nothing happens.
+func CheckErrorAndExitLog(function string, message string, err error) {
+	if err != nil {
+		ErrorLog(function, message + " " + err.Error())
+		os.Exit(1)
+	}
+}
