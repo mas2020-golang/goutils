@@ -27,4 +27,7 @@ func TestOutput(t *testing.T) {
 	Info("", "Info message without function name")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
+
+	//err := fmt.Errorf("this is an error to trace")
+	//CheckErrorAndExitLog("", "Error message:", err)
 }
