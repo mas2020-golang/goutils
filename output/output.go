@@ -20,15 +20,15 @@ func printMessage(level, function, message string) {
 
 	switch level {
 	case "ERROR":
-		fmt.Printf("[%s] %s\n", Red+level+Reset, t)
+		fmt.Printf("[%s] %s\n", RED+level+RESET, t)
 	case "WARNING":
-		fmt.Printf("[%s] %s\n", Yellow+level+Reset, t)
+		fmt.Printf("[%s] %s\n", YELLOW+level+RESET, t)
 	case "INFO":
-		fmt.Printf("[%s] %s\n", Green+level+Reset, t)
+		fmt.Printf("[%s] %s\n", GREEN+level+RESET, t)
 	case "DEBUG":
-		fmt.Printf("[%s] %s\n", Gray+level+Reset, t)
+		fmt.Printf("[%s] %s\n", GRAY+level+RESET, t)
 	case "TRACE":
-		fmt.Printf("[%s] %s\n", DarkGray+level+Reset, t)
+		fmt.Printf("[%s] %s\n", DARK_GRAY+level+RESET, t)
 	}
 }
 

@@ -30,4 +30,10 @@ func TestOutput(t *testing.T) {
 
 	//err := fmt.Errorf("this is an error to trace")
 	//CheckErrorAndExitLog("", "Error message:", err)
+
+	// Use color in the log output
+	log.SetFormatter(new(TextColorFormatter))
+	InfoLog("", "Info message without function name and color")
+	WarningLog("", "Warning message without function name and color")
+	TraceLog("TestOutput", "Trace message and color")
 }

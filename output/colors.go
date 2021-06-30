@@ -5,78 +5,78 @@ import (
 )
 
 const (
-	Reset  = "\033[0m"
-	Red    = "\033[31m"
-	LightRed    = "\033[91m"
-	Green  = "\033[32m"
-	LightGreen  = "\033[92m"
-	Yellow = "\033[33m"
-	LightYellow = "\033[93m"
-	Blue   = "\033[34m"
-	LightBlue   = "\033[94m"
-	Purple = "\033[35m"
-	LightPurple = "\033[95m"
-	Cyan   = "\033[36m"
-	LightCyan   = "\033[96m"
-	Gray   = "\033[37m"
-	White  = "\033[97m"
-	Default = "\033[39m"
-	DarkGray = "\033[90m"
-	Bold = "\033[1m"
+	RESET        = "\033[0m"
+	RED          = "\033[31m"
+	LIGHT_RED    = "\033[91m"
+	GREEN        = "\033[32m"
+	LIGHT_GREEN  = "\033[92m"
+	YELLOW       = "\033[33m"
+	LIGHT_YELLOW = "\033[93m"
+	BLUE         = "\033[34m"
+	LIGHT_BLUE   = "\033[94m"
+	PURPLE       = "\033[35m"
+	LIGHT_PURPLE = "\033[95m"
+	CYAN         = "\033[36m"
+	LIGHT_CYAN   = "\033[96m"
+	GRAY         = "\033[37m"
+	WHITE        = "\033[97m"
+	DEFAULT      = "\033[39m"
+	DARK_GRAY    = "\033[90m"
+	BOLD         = "\033[1m"
 )
 
-func GreenText(message string) {
-	fmt.Printf("%s%s%s\n",Green,message,Reset)
+func Green(message string) {
+	fmt.Printf("%s%s%s\n", GREEN, message, RESET)
 }
 
-func GreenTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Green,Bold,message,Reset)
+func GreenBold(message string) {
+	fmt.Printf("%s%s%s%s\n", GREEN, BOLD, message, RESET)
 }
 
-func BlueText(message string) {
-	fmt.Printf("%s%s%s\n",Blue,message,Reset)
+func Blue(message string) {
+	fmt.Printf("%s%s%s\n", BLUE, message, RESET)
 }
 
-func BlueTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Blue,Bold,message,Reset)
+func BlueBold(message string) {
+	fmt.Printf("%s%s%s%s\n", BLUE, BOLD, message, RESET)
 }
 
-func YellowText(message string) {
-	fmt.Printf("%s%s%s\n",Yellow,message,Reset)
+func Yellow(message string) {
+	fmt.Printf("%s%s%s\n", YELLOW, message, RESET)
 }
 
-func YellowTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Yellow,Bold,message,Reset)
+func YellowBold(message string) {
+	fmt.Printf("%s%s%s%s\n", YELLOW, BOLD, message, RESET)
 }
 
-func CyanText(message string) {
-	fmt.Printf("%s%s%s\n",Cyan,message,Reset)
+func Cyan(message string) {
+	fmt.Printf("%s%s%s\n", CYAN, message, RESET)
 }
 
-func CyanTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Cyan,Bold,message,Reset)
+func CyanBold(message string) {
+	fmt.Printf("%s%s%s%s\n", CYAN, BOLD, message, RESET)
 }
 
-func WhiteText(message string) {
-	fmt.Printf("%s%s%s\n",White,message,Reset)
+func White(message string) {
+	fmt.Printf("%s%s%s\n", WHITE, message, RESET)
 }
 
-func WhiteTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",White,Bold,message,Reset)
+func WhiteBold(message string) {
+	fmt.Printf("%s%s%s%s\n", WHITE, BOLD, message, RESET)
 }
 
-func MagentaText(message string) {
-	fmt.Printf("%s%s%s\n",Purple,message,Reset)
+func Magenta(message string) {
+	fmt.Printf("%s%s%s\n", PURPLE, message, RESET)
 }
 
-func MagentaTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Purple,Bold,message,Reset)
+func MagentaBold(message string) {
+	fmt.Printf("%s%s%s%s\n", PURPLE, BOLD, message, RESET)
 }
 
-func RedText(message string) {
-	fmt.Printf("%s%s%s\n",Red,message,Reset)
+func Red(message string) {
+	fmt.Printf("%s%s%s\n", RED, message, RESET)
 }
 
-func RedTextB(message string) {
-	fmt.Printf("%s%s%s%s\n",Red,Bold,message,Reset)
+func RedBold(message string) {
+	fmt.Printf("%s%s%s%s\n", RED, BOLD, message, RESET)
 }
