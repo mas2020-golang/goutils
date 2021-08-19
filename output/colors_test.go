@@ -2,23 +2,21 @@ package output
 
 import (
 	"testing"
-	"github.com/jedib0t/go-pretty/text"
-	log "github.com/sirupsen/logrus"
 )
 
 func TestColors(t *testing.T) {
-	log.SetLevel(log.TraceLevel)
-	Error("TestColors", "Error message")
-	Debug("TestColors", "Debug message")
-	Trace("TestColors", "Trace message")
-	Green("Green message")
-	GreenBold("Green Bold message")
-	Blue("Blue message")
-	BlueBold("Blue Bold message")
-	Yellow("Yellow message")
-	YellowBold("Yellow Bold message")
-	Cyan("Cyan message")
-	CyanBold("Cyan Bold message")
-	Message("Generic message", text.Colors{text.Bold, text.BgGreen})
-	//ErrorExit("TestColors", "Error message bye bye...")
+	Red("RED message")
+	RedBold("RED bold message")
+	Green("GREEN message")
+	GreenBold("GREEN bold message")
+	Blue("BLUE message")
+	BlueBold("BLUE bold message")
+	Yellow("YELLOW message")
+	YellowBold("YELLOW bold message")
+	Cyan("CYAN message")
+	CyanBold("CYAN bold message")
+	White("WHITE message")
+	WhiteBold("WHITE bold message")
+	Magenta("Magenta message")
+	MagentaBold("Magenta bold message")
 }
