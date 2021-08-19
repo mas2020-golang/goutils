@@ -57,7 +57,10 @@ func Info(function string, message string) {
 	printMessage("INFO", function, message)
 }
 
-
+// StartCmd prints to the standard output the common pattern for a command starting message
+func StartCmd(message string) {
+	fmt.Printf("%s %s", Cmd, WhiteBoldS(message))
+}
 
 func printLog(level, function, message string) {
 	var t string

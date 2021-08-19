@@ -1,6 +1,7 @@
 package output
 
 import (
+	"fmt"
 	log "github.com/sirupsen/logrus"
 	"testing"
 )
@@ -27,6 +28,8 @@ func TestOutput(t *testing.T) {
 	Info("", "Info message without function name")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
+	StartCmd("this is a new command starting...")
+	fmt.Printf("%s ok flag, %s error flag, %s error cmd\n",OkFlag, ErrorFlag, ErrorCmd)
 
 	//err := fmt.Errorf("this is an error to trace")
 	//CheckErrorAndExitLog("", "Error message:", err)

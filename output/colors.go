@@ -23,6 +23,10 @@ const (
 	DEFAULT      = "\033[39m"
 	DARK_GRAY    = "\033[90m"
 	BOLD         = "\033[1m"
+	Cmd = "\033[92m➜\033[0m"
+	OkFlag = "\u001B[92m✔\u001B[0m"
+	ErrorFlag = "\033[91m✘\033[0m"
+	ErrorCmd = "[\033[91mERROR\033[0m]"
 )
 
 func Green(message string) {
@@ -61,8 +65,16 @@ func White(message string) {
 	fmt.Printf("%s%s%s\n", WHITE, message, RESET)
 }
 
+func WhiteS(message string) string {
+	return fmt.Sprintf("%s%s%s\n", WHITE, message, RESET)
+}
+
 func WhiteBold(message string) {
 	fmt.Printf("%s%s%s%s\n", WHITE, BOLD, message, RESET)
+}
+
+func WhiteBoldS(message string) string {
+	return fmt.Sprintf("%s%s%s%s\n", WHITE, BOLD, message, RESET)
 }
 
 func Magenta(message string) {
