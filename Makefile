@@ -1,7 +1,6 @@
 # Makefile variables
 
 test:
-	@echo "==> goal test..."
 	@go test ./... -v
 
 gotest:
