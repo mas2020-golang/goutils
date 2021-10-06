@@ -28,8 +28,9 @@ func TestOutput(t *testing.T) {
 	Info("", "Info message without function name")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
-	StartCmd("this is a new command starting...")
-	fmt.Printf("%s ok flag, %s error flag, %s error cmd\n",OkFlag, ErrorFlag, ErrorCmd)
+	Command("this is a new command starting...")
+	SubCommand("this is a new sub command starting...")
+	fmt.Printf("%s ok flag, %s error flag, %s error cmd\n", OkFlag, ErrorFlag, ErrorCmd)
 
 	//err := fmt.Errorf("this is an error to trace")
 	//CheckErrorAndExitLog("", "Error message:", err)
