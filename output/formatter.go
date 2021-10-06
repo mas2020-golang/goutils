@@ -17,10 +17,10 @@ func (f *TextColorFormatter) Format(entry *log.Entry) ([]byte, error) {
 	//var err error
 	serialized := make([]byte, 0, 300)
 	serialized = append(serialized, []byte(entry.Time.Format("2006-01-02 15:04:05.000 "))...)
-	level := fmt.Sprintf("%-19s",colorizeLevel(entry.Level))
+	level := fmt.Sprintf("%-19s", colorizeLevel(entry.Level))
 	serialized = append(serialized, []byte(level)...)
 	serialized = append(serialized, []byte(entry.Message)...)
-	if data, err := json.Marshal(entry.Data); err == nil && len(data) > 2{
+	if data, err := json.Marshal(entry.Data); err == nil && len(data) > 2 {
 		serialized = append(serialized, ' ')
 		serialized = append(serialized, data...)
 	}
@@ -28,20 +28,20 @@ func (f *TextColorFormatter) Format(entry *log.Entry) ([]byte, error) {
 }
 
 // colorizeLevels applies a color based to the log.Level
-func colorizeLevel(l log.Level) string{
+func colorizeLevel(l log.Level) string {
 	switch l {
 	case log.ErrorLevel:
-		return fmt.Sprintf("%-10s","[" +RED+ strings.ToUpper(l.String()) +RESET+ "] ")
+		return fmt.Sprintf("%-10s", "["+RED+strings.ToUpper(l.String())+Reset+"] ")
 	case log.WarnLevel:
-		return fmt.Sprintf("%-10s","[" +YELLOW+ strings.ToUpper(l.String()) +RESET+ "] ")
+		return fmt.Sprintf("%-10s", "["+YELLOW+strings.ToUpper(l.String())+Reset+"] ")
 	case log.InfoLevel:
-		return fmt.Sprintf("%-10s","[" +GREEN+ strings.ToUpper(l.String()) +RESET+ "] ")
+		return fmt.Sprintf("%-10s", "["+GREEN+strings.ToUpper(l.String())+Reset+"] ")
 	case log.DebugLevel:
-		return fmt.Sprintf("%-10s","[" +GRAY+ strings.ToUpper(l.String()) +RESET+ "] ")
+		return fmt.Sprintf("%-10s", "["+GRAY+strings.ToUpper(l.String())+Reset+"] ")
 	case log.TraceLevel:
-		return fmt.Sprintf("%-10s","[" +DARK_GRAY+ strings.ToUpper(l.String()) +RESET+ "] ")
+		return fmt.Sprintf("%-10s", "["+DARK_GRAY+strings.ToUpper(l.String())+Reset+"] ")
 	default:
-		return fmt.Sprintf("%-10s","[" + strings.ToUpper(l.String()) + "] ")
+		return fmt.Sprintf("%-10s", "["+strings.ToUpper(l.String())+"] ")
 	}
 }
 
@@ -55,10 +55,10 @@ func (f *TextFormatter) Format(entry *log.Entry) ([]byte, error) {
 	//var err error
 	serialized := make([]byte, 0, 300)
 	serialized = append(serialized, []byte(entry.Time.Format("2006-01-02 15:04:05.000 "))...)
-	level := fmt.Sprintf("%-10s","[" + strings.ToUpper(entry.Level.String()) + "] ")
+	level := fmt.Sprintf("%-10s", "["+strings.ToUpper(entry.Level.String())+"] ")
 	serialized = append(serialized, []byte(level)...)
 	serialized = append(serialized, []byte(entry.Message)...)
-	if data, err := json.Marshal(entry.Data); err == nil && len(data) > 2{
+	if data, err := json.Marshal(entry.Data); err == nil && len(data) > 2 {
 		serialized = append(serialized, ' ')
 		serialized = append(serialized, data...)
 	}
