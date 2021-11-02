@@ -1,6 +1,7 @@
 package output
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -19,4 +20,6 @@ func TestColors(t *testing.T) {
 	WhiteOutBold("WHITE bold message")
 	MagentaOut("MagentaOut message")
 	MagentaOutBold("MagentaOut bold message")
+	Bold("Bold message")
+	fmt.Printf("Now a %s string\n", BoldS("BOLD"))
 }

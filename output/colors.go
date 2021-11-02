@@ -134,6 +134,10 @@ func RedOutBold(message string) {
 	fmt.Printf("%s%s%s%s\n", RED, BOLD, message, Reset)
 }
 
-func Bolds(message string) string {
+func Bold(message string) {
+	fmt.Printf("%s%s%s\n", BOLD, message, Reset)
+}
+
+func BoldS(message string) string {
 	return fmt.Sprintf("%s%s%s", BOLD, message, Reset)
 }
