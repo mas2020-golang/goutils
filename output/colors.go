@@ -24,8 +24,7 @@ const (
 	DARK_GRAY    = "\033[90m"
 	BOLD         = "\033[1m"
 	Orange       = "\033[38;5;167m"
-	Cmd          = "\033[1;92m➜\033[0m"
-	SubCmd       = "\033[38;5;167m⌁\033[0m"
+	Cmd          = "\033[1;34m➜\033[0m"
 	OkFlag       = "\u001B[92m✔\u001B[0m"
 	ErrorFlag    = "\033[91m✘\033[0m"
 	ErrorCmd     = "[\033[91mERROR\033[0m]"
@@ -134,6 +133,10 @@ func RedOutBold(message string) {
 	fmt.Printf("%s%s%s%s\n", RED, BOLD, message, Reset)
 }
 
-func Bolds(message string) string {
+func Bold(message string) {
+	fmt.Printf("%s%s%s\n", BOLD, message, Reset)
+}
+
+func BoldS(message string) string {
 	return fmt.Sprintf("%s%s%s", BOLD, message, Reset)
 }

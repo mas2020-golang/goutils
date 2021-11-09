@@ -28,8 +28,8 @@ func TestOutput(t *testing.T) {
 	Info("", "Info message without function name")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
-	Command("this is a new command starting...")
-	SubCommand("this is a new sub command starting...")
+	Activity("This is a new activity starting...")
+	SubActivity("this is a new sub activity starting...")
 	fmt.Printf("%s ok flag, %s error flag, %s error cmd\n", OkFlag, ErrorFlag, ErrorCmd)
 
 	//err := fmt.Errorf("this is an error to trace")

@@ -56,14 +56,14 @@ func Info(function string, message string) {
 	printMessage("INFO", function, message)
 }
 
-// Command prints to the standard output the common pattern for a command starting message
-func Command(message string) {
-	fmt.Printf("%s %s\n", Cmd, fmt.Sprintf(BOLD+message+Reset))
+// Activity prints to the standard output the common pattern for an activity
+func Activity(message string) {
+	fmt.Printf("%s%s%s\n", BOLD, message, Reset)
 }
 
-// Command prints to the standard output the common pattern for a command starting message
-func SubCommand(message string) {
-	fmt.Printf("%s %s\n", SubCmd, OrangeS(message))
+// SubActivity prints to the standard output the common pattern for a sub activity
+func SubActivity(message string) {
+	fmt.Printf("%s %s\n", Cmd, message)
 }
 
 // Success prints to the standard output the common pattern for a successful message
