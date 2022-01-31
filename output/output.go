@@ -19,41 +19,41 @@ func printMessage(level, function, message string) {
 	}
 
 	switch level {
-	case "ERROR":
-		fmt.Printf("[%s] %s\n", RED+level+Reset, t)
-	case "WARNING":
-		fmt.Printf("[%s] %s\n", YELLOW+level+Reset, t)
-	case "INFO":
-		fmt.Printf("[%s] %s\n", GREEN+level+Reset, t)
-	case "DEBUG":
-		fmt.Printf("[%s] %s\n", GRAY+level+Reset, t)
-	case "TRACE":
-		fmt.Printf("[%s] %s\n", DARK_GRAY+level+Reset, t)
+	case "Error:":
+		fmt.Printf("%s %s\n", RED+BOLD+level+Reset, t)
+	case "Warning:":
+		fmt.Printf("%s %s\n", YELLOW+BOLD+level+Reset, t)
+	case "Info:":
+		fmt.Printf("%s %s\n", GREEN+BOLD+level+Reset, t)
+	case "Debug:":
+		fmt.Printf("%s %s\n", GRAY+BOLD+level+Reset, t)
+	case "Trace:":
+		fmt.Printf("%s %s\n", DARK_GRAY+BOLD+level+Reset, t)
 	}
 }
 
 func Error(function string, message string) {
-	printMessage("ERROR", function, message)
+	printMessage("Error:", function, message)
 }
 
 func Debug(function string, message string) {
-	printMessage("DEBUG", function, message)
+	printMessage("Debug:", function, message)
 }
 
 func Trace(function string, message string) {
-	printMessage("TRACE", function, message)
+	printMessage("Trace:", function, message)
 }
 
 func Warning(function string, message string) {
-	printMessage("WARNING", function, message)
+	printMessage("Warning:", function, message)
 }
 
 func Warn(function string, message string) {
-	printMessage("WARNING", function, message)
+	printMessage("Warn:", function, message)
 }
 
 func Info(function string, message string) {
-	printMessage("INFO", function, message)
+	printMessage("Info:", function, message)
 }
 
 // Activity prints to the standard output the common pattern for an activity
@@ -85,41 +85,41 @@ func printLog(level, function, message string) {
 	}
 
 	switch level {
-	case "ERROR":
+	case "Error":
 		log.Error(fmt.Sprintf("%s", t))
-	case "WARNING":
+	case "Warning":
 		log.Warn(fmt.Sprintf("%s", t))
-	case "INFO":
+	case "Info":
 		log.Info(fmt.Sprintf("%s", t))
-	case "DEBUG":
+	case "Debug":
 		log.Debug(fmt.Sprintf("%s", t))
-	case "TRACE":
+	case "Trace":
 		log.Trace(fmt.Sprintf("%s", t))
 	}
 }
 
 func ErrorLog(function string, message string) {
-	printLog("ERROR", function, message)
+	printLog("Error", function, message)
 }
 
 func WarningLog(function string, message string) {
-	printLog("WARNING", function, message)
+	printLog("Warning", function, message)
 }
 
 func WarnLog(function string, message string) {
-	printLog("WARNING", function, message)
+	printLog("Warn", function, message)
 }
 
 func InfoLog(function string, message string) {
-	printLog("INFO", function, message)
+	printLog("Info", function, message)
 }
 
 func DebugLog(function string, message string) {
-	printLog("DEBUG", function, message)
+	printLog("Debug", function, message)
 }
 
 func TraceLog(function string, message string) {
-	printLog("TRACE", function, message)
+	printLog("Trace", function, message)
 }
 
 // ErrorExit shows error and exit with error code = 1

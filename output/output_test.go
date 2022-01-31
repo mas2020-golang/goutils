@@ -37,7 +37,8 @@ func TestOutput(t *testing.T) {
 
 	// Use color in the log output
 	log.SetFormatter(new(TextColorFormatter))
-	InfoLog("", "Info message without function name and color")
-	WarningLog("", "Warning message without function name and color")
+	ErrorLog("", "Error message without function name")
+	InfoLog("", "Info message without function name")
+	WarningLog("", "Warning message without function name")
 	TraceLog("TestOutput", "Trace message and color")
 }
