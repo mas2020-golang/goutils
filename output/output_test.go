@@ -22,6 +22,7 @@ func TestOutput(t *testing.T) {
 	TraceLog("", "Trace message without function name")
 	Warn("TestOutput", "Warning message")
 	Warn("", "Warning message without function name")
+	fmt.Println(fmt.Sprintf("%s - %s", "WarnS output", WarnS("WarnS message without function name")))
 	WarningLog("TestOutput", "Warning message")
 	WarningLog("", "Warning message without function name")
 	Info("TestOutput", "Info message")
