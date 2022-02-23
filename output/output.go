@@ -52,6 +52,10 @@ func Warn(function string, message string) {
 	printMessage("Warn:", function, message)
 }
 
+func WarnS(message string) string {
+	return fmt.Sprintf("%s %s\n", YELLOW+BOLD+"Warn:"+Reset, message)
+}
+
 func Info(function string, message string) {
 	printMessage("Info:", function, message)
 }
