@@ -2,8 +2,9 @@ package output
 
 import (
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"os"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func init() {
@@ -58,6 +59,10 @@ func WarnS(message string) string {
 
 func Info(function string, message string) {
 	printMessage("Info:", function, message)
+}
+
+func InfoBox(message string) {
+	fmt.Printf("%s--%s %s\n", YELLOW, Reset, message)
 }
 
 // Activity prints to the standard output the common pattern for an activity
