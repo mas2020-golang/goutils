@@ -2,8 +2,9 @@ package output
 
 import (
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"testing"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func TestOutput(t *testing.T) {
@@ -22,10 +23,12 @@ func TestOutput(t *testing.T) {
 	TraceLog("", "Trace message without function name")
 	Warn("TestOutput", "Warning message")
 	Warn("", "Warning message without function name")
+	fmt.Println(fmt.Sprintf("%s - %s", "WarnS output", WarnS("WarnS message without function name")))
 	WarningLog("TestOutput", "Warning message")
 	WarningLog("", "Warning message without function name")
 	Info("TestOutput", "Info message")
 	Info("", "Info message without function name")
+	InfoBox("this is a new box info")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
 	Activity("This is a new activity starting...")
@@ -37,7 +40,8 @@ func TestOutput(t *testing.T) {
 
 	// Use color in the log output
 	log.SetFormatter(new(TextColorFormatter))
-	InfoLog("", "Info message without function name and color")
-	WarningLog("", "Warning message without function name and color")
+	ErrorLog("", "Error message without function name")
+	InfoLog("", "Info message without function name")
+	WarningLog("", "Warning message without function name")
 	TraceLog("TestOutput", "Trace message and color")
 }
