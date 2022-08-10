@@ -2,8 +2,9 @@ package output
 
 import (
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"testing"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func TestOutput(t *testing.T) {
@@ -27,6 +28,7 @@ func TestOutput(t *testing.T) {
 	WarningLog("", "Warning message without function name")
 	Info("TestOutput", "Info message")
 	Info("", "Info message without function name")
+	InfoBox("this is a new box info")
 	InfoLog("TestOutput", "Info message")
 	InfoLog("", "Info message without function name")
 	Activity("This is a new activity starting...")
