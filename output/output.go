@@ -20,9 +20,9 @@ func printMessage(level, function, message string) {
 	}
 
 	switch level {
-	case "Error:":
+	case "│ Error:":
 		fmt.Printf("%s %s\n", RED+BOLD+level+Reset, t)
-	case "Warning:":
+	case "│ Warning:":
 		fmt.Printf("%s %s\n", YELLOW+BOLD+level+Reset, t)
 	case "Info:":
 		fmt.Printf("%s %s\n", GREEN+BOLD+level+Reset, t)
@@ -34,7 +34,7 @@ func printMessage(level, function, message string) {
 }
 
 func Error(function string, message string) {
-	printMessage("Error:", function, message)
+	printMessage("│ Error:", function, message)
 }
 
 func Debug(function string, message string) {
@@ -46,7 +46,7 @@ func Trace(function string, message string) {
 }
 
 func Warning(function string, message string) {
-	printMessage("Warning:", function, message)
+	printMessage("│ Warning:", function, message)
 }
 
 func Warn(function string, message string) {
