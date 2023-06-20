@@ -24,7 +24,7 @@ const (
 	DARK_GRAY    = "\033[90m"
 	BOLD         = "\033[1m"
 	Orange       = "\033[38;5;167m"
-	Cmd          = "\033[1;34m➜\033[0m"
+	Cmd          = "\033[34m>>\033[0m"
 	OkFlag       = "\u001B[92m✔\u001B[0m"
 	ErrorFlag    = "\033[91m✘\033[0m"
 	ErrorCmd     = "[\033[91mERROR\033[0m]"
