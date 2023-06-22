@@ -24,7 +24,9 @@ func printMessage(level, function, message string) {
 		fmt.Printf("%s %s\n", RED+BOLD+level+Reset, t)
 	case "│ Warning:":
 		fmt.Printf("%s %s\n", YELLOW+BOLD+level+Reset, t)
-	case "Info:":
+	case "│ Warn:":
+		fmt.Printf("%s %s\n", YELLOW+BOLD+level+Reset, t)	
+	case "│ Info:":
 		fmt.Printf("%s %s\n", GREEN+BOLD+level+Reset, t)
 	case "Debug:":
 		fmt.Printf("%s %s\n", GRAY+BOLD+level+Reset, t)
@@ -50,15 +52,19 @@ func Warning(function string, message string) {
 }
 
 func Warn(function string, message string) {
-	printMessage("Warn:", function, message)
+	printMessage("│ Warn:", function, message)
 }
 
 func WarnS(message string) string {
-	return fmt.Sprintf("%s %s\n", YELLOW+BOLD+"Warn:"+Reset, message)
+	return fmt.Sprintf("%s %s", YELLOW+BOLD+"│ Warn:"+Reset, message)
 }
 
 func Info(function string, message string) {
-	printMessage("Info:", function, message)
+	printMessage("│ Info:", function, message)
+}
+
+func OK(message string) {
+	fmt.Printf("%s%s%s\n", GREEN, message, Reset)
 }
 
 func InfoBox(message string) {
@@ -92,7 +98,6 @@ func printLog(level, function, message string) {
 	} else {
 		t = fmt.Sprintf("%s", message)
 	}
-
 	switch level {
 	case "Error":
 		log.Error(fmt.Sprintf("%s", t))
@@ -116,7 +121,7 @@ func WarningLog(function string, message string) {
 }
 
 func WarnLog(function string, message string) {
-	printLog("Warn", function, message)
+	printLog("Warning", function, message)
 }
 
 func InfoLog(function string, message string) {
