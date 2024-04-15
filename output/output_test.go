@@ -35,6 +35,7 @@ func TestOutput(t *testing.T) {
 	InfoLog("", "Info message without function name")
 	Activity("This is a new activity starting...")
 	SubActivity("this is a new sub activity starting...")
+	ActivityBox("this is a new activity box message")
 	fmt.Printf("%s ok flag, %s error flag, %s error cmd\n", OkFlag, ErrorFlag, ErrorCmd)
 
 	//err := fmt.Errorf("this is an error to trace")
