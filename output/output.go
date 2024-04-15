@@ -81,6 +81,11 @@ func SubActivity(message string) {
 	fmt.Printf("%s %s\n", Cmd, message)
 }
 
+// ActivityBox prints the OKFlag and the message
+func ActivityBox(message string) {
+	fmt.Printf("%s %s\n", OkFlag, message)
+}
+
 // Success prints to the standard output the common pattern for a successful message
 func Success(message string) {
 	fmt.Printf("%s %s\n", OkFlag, message)
